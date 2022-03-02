@@ -5,10 +5,10 @@ import EMAIL from '@salesforce/schema/Contact.Email';
 import getContacts from '@salesforce/apex/ContactController.getContacts';
 const COLUMNS = [
     { label: 'First Name', fieldName: FIRST_NAME.fieldApiName, type: 'text' },
-    { label: 'Last Name', fieldName: LAST_NAME.fieldApiName, type: 'text' },
-    { label: 'Email', fieldName: EMAIL.fieldApiName, type: 'text' }
+    { label: 'Last Name', fieldName: EMAIL.fieldApiName, type: 'text' },
+    { label: 'Email', fieldName: LAST_NAME.fieldApiName, type: 'text' }
 ];
-export default class ContactsList extends LightningElement {
+export default class ContactList extends LightningElement {
     columns = COLUMNS;
     @wire(getContacts)
     contacts;
